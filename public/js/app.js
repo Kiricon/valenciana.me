@@ -113,3 +113,5 @@ app.directive('skillsSection', function(){
        templateUrl: 'partials/skills.old.html'
    }
 });
+
+// Just adding a quick comment
