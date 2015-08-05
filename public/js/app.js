@@ -113,3 +113,4 @@ app.directive('skillsSection', function(){
        templateUrl: 'partials/skills.old.html'
    }
 });
+//commit this son
