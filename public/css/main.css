@@ -268,11 +268,11 @@
 }
 
 #ide .yellow {
-    background: #FFC107;
+  background: #FFC107;
 }
 
 #ide .green {
-    background: #4CAF50;
+  background: #4CAF50;
 }
 
 @-webkit-keyframes fadein {
