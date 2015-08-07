@@ -28,11 +28,23 @@ module.exports = function(grunt) {
                     'public/js/app.js']
                 }
             }
+        },
+        browserSync: {
+          dev: {
+            bsFiles: {
+              src : ['public/css/*.css', 'app/views/*/*.phtml', 'public/js/*.js', 'public/partials/*.html']
+            },
+            options: {
+              proxy: "valenciana.me",
+              reloadDelay: 500
+            }
+          }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['cssmin', 'uglify']);
+    grunt.registerTask('default', ['cssmin', 'uglify', 'browserSync']);
 };
