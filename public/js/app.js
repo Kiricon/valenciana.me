@@ -24,6 +24,7 @@ app.controller('TabController', function($scope, $location){
         $('#center-content').addClass('restcenter');
         $('#title-description').addClass('fadeaway');
         $('#explore').addClass('fadeaway');
+        $('#background').css({"top":"0%", "opacity": "1"});
         $("#center-content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
             function() {
                 $('#center-content').css({

@@ -17,7 +17,7 @@
     height: 200px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: 110% auto;
 
     font-family: 'open sans';
     color: white;
@@ -105,7 +105,7 @@
 }
 
 .project:hover {
-    background-size: 100%;
+    background-size: 100% auto;
 }
 
 .description .proj-section:nth-child(odd) .project{
