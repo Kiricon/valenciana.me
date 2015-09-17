@@ -3,13 +3,14 @@
         height: 100%;
         width: 100%;
         margin: 0px !important;
+        overflow-y: hidden;
     }
     body {
         width: 100%;
         height: 100%;
         display: table;
         margin: 0px;
-        background: url('img/min/oregon.jpg') no-repeat center center fixed !important;
+        background: url('http://www.mrwallpaper.com/wallpapers/paris-eiffel-tower-blurred-1366x768.jpg') no-repeat center center fixed !important;
         background-size: 100% 100% !important;
         background-color: black;
     }
@@ -17,11 +18,34 @@
         text-decoration: none;
         color: inherit;
     }
-    #center-content {
-        display: table;
+    .center-content {
+        position:absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display:table;
         margin: 20px auto 0px auto;
         text-align: center;
-        position: relative;
+    }
+
+    @media screen and (max-width: 600px) {
+      .center-content {
+        position: relative !important;
+        top: 0% !important;
+        left: 0% !important;
+        transform: translate(0%, 0%) !important;
+      }
+
+        #nav-bar {
+          width: 98% !important;
+          margin: 0px 0px !important;
+          padding: 1% !important;
+          font-size: 1em !important;
+        }
+        html {
+          overflow-y: auto !important;
+        }
+
     }
 
     #title {
@@ -52,7 +76,28 @@
         background: -o-linear-gradient(left, transparent 0%,#fff 50%,transparent 100%);
         background: linear-gradient(left, transparent 0%,#fff 50%,transparent 100%);
     }
-
+    #explore {
+        display: table;
+        font-family: 'open sans';
+        text-align: center;
+        font-size: 1.5em;
+        /* text-transform: uppercase; */
+        font-weight: 300;
+        color: rgba(255,255,255, 1);
+        line-height: 1.2;
+        text-shadow: 0 0 0.07em white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        border: solid 2px white;
+        margin: 0px auto;
+        position: relative;
+        overflow:hidden;
+        cursor: pointer;
+    }
+    #explore span {
+        font-size: 32px;
+        text-shadow: none;
+    }
     #title-description {
         height: 100%;
         margin-bottom: 20px;
@@ -76,44 +121,11 @@
         opacity: 0.6;
     }
 
-    #headshot {
-        width: 30%;
-        height: 30%;
-    }
-
-    #nav-bar {
+    #center-content img {
+        height: 50%;
         width: 50%;
-        margin: 0px auto;
-        padding: 20px 20px 0px 20px;
-        border-radius: 10px 10px 0px 0px;
-        background-color: #19181a;
-        display:table;
-        font-family: 'open sans';
-        text-align: center;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        font-weight: 300;
-        color: white;
-        line-height: 1.2;
-        text-shadow: 0 0 0.04em white;
-        margin: 0px auto;
-        box-shadow: 0 2px 10px 0 rgba(0,0,0,.6);
     }
 
-    #nav-wrapper {
-        display: table;
-        margin: 0px auto;
-    }
-    .nav-item {
-        opacity: 0.8;
-        float: left;
-        padding: 10px 15px;
-        border-bottom: solid 1px #313032;
-    }
-
-    #skill-body {
-        width: 100%; margin: 0px auto;  box-shadow: 0 2px 10px 0 rgba(0,0,0,.6);
-    }
     #overlay {
         position: absolute;
         height: 100%;

@@ -15,30 +15,40 @@ app.controller('TabController', function($scope, $location){
 
     this.updateUrl = function(){
         $scope.$apply(function(){
-           $location.path('/welcome')
+           $location.path('/experience')
         });
     }
     var self = this;
     this.transend = function(){
 
-        $('#center-content').addClass('restcenter');
+        $('#center-content').addClass('fadeaway');
         $('#title-description').addClass('fadeaway');
         $('#explore').addClass('fadeaway');
         $('#background').css({"top":"0%", "opacity": "1"});
         $("#center-content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
             function() {
-                $('#center-content').css({
+      /*          $('#center-content').css({
                     "position": "relative",
                     "top": "0%",
                     "transform": "translate(0%,0%)",
                     "left": "0%",
                     "margin": "0px auto",
                     "transition": "none"
-                });
+                }); */
+                $('#center-content').remove();
                 $('#explore').remove();
                 $('#title-description').remove();
-                $('#nav-bar').css('opacity', '1');
-                $('.ngview').css('opacity', '1');
+              //  $('#nav-bar').css('opacity', '1');
+                $('.ngview').css({
+                  "position": "absolute",
+                  "top": "45%",
+                  "left": "50%",
+                  "transform": "translate(-50%, -50%)",
+                  "display": "table",
+                  "margin": "20px auto 0px auto",
+                  "opacity": "1",
+                });
+                $('body').css('overflow-y', 'auto');
                 self.updateUrl();
             });
     }
@@ -86,32 +96,28 @@ app.config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true).hashPrefix('!');
 });
 
+(function() {
 
-app.directive('ideSection', function(){
-   return {
-       restrict: 'E',
-       templateUrl: 'partials/ide-section.html',
-       link: function(scope, element){
-           var editor = ace.edit('monokai');
-           editor.setTheme("ace/theme/monokai");
-           editor.getSession().setUseWrapMode(true);
-           editor.session.setMode('ace/mode/javascript');
-           editor.$blockScrolling = Infinity;
-       }
-   }
-});
+  'use strict';
 
-app.directive('experienceSection', function(){
-   return {
-       restrict: 'E',
-       templateUrl: 'partials/experience-section.html'
-   }
-});
+  document.querySelector('.material-design-hamburger__icon').addEventListener(
+    'click',
+    function() {
+      var child;
 
-app.directive('skillsSection', function(){
-   return {
-       restrict: 'E',
-       templateUrl: 'partials/skills.old.html'
-   }
-});
-//Making sure that this works lol
+      document.body.classList.toggle('background--blur');
+      this.parentNode.nextElementSibling.classList.toggle('menu--on');
+
+      child = this.childNodes[1].classList;
+
+      if (child.contains('material-design-hamburger__icon--to-arrow')) {
+        child.remove('material-design-hamburger__icon--to-arrow');
+        child.add('material-design-hamburger__icon--from-arrow');
+      } else {
+        child.remove('material-design-hamburger__icon--from-arrow');
+        child.add('material-design-hamburger__icon--to-arrow');
+      }
+
+    });
+
+})();
