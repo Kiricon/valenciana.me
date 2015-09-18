@@ -92,6 +92,34 @@
     width: 80%;
     margin: 0% auto;
 }
+.proj-show {
+  position: absolute !important;
+opacity: 1 !important;
+top: 25%;
+width: 100% !important;
+font-size: 3em !important;
+font-weight: bold;
+text-shadow: 0 0 0.07em white;
+text-transform: uppercase;
+transition: all 300ms;
+}
+.proj-img {
+  height: 100%;
+width: 100% !important;
+position: absolute !important;
+background-position: center;
+opacity: 1 !important;
+-webkit-filter: blur(0px);
+z-index: 1 !important;
+transiton: all 300ms;
+}
+
+.project:hover .proj-img {
+  -webkit-filter: blur(2px);
+}
+.project:hover .proj-show {
+  opacity: 0 !important;
+}
 
 .project .proj-name {
     margin-top: 0%;

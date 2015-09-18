@@ -13,27 +13,14 @@
   </section>
 
   <section class="menu menu--off">
-    <div>Home</div>
-    <div>Experience</div>
-    <div>About Me</div>
+    <div><a href="/">Home</a>
+      <div class="diamond">&#9670;</div><div class="line"></div>
+    </div>
+    <div><a href="experience">Experience</a><div class="diamond">&#9670;</div><div class="line"></div></div>
+    <div><a href="about">About Me</a><div class="diamond">&#9670;</div><div class="line"></div></div>
     <div>Contact Me</div>
   </section>
   <div id="overlay"></div>
-  <div id="center-content" class="center-content" style="">
-    <div id="title"><a href="welcome">Dominic Valenciana</a></div>
-    <a href="welcome">
-      <img id="headshot" onload="this.style.opacity='1';" src="http://i.imgur.com/c3P9Bgy.jpg" style="height: 200px; width: 200px; border-radius:50%; box-shadow: 0 6px 20px 0 rgba(0,0,0,.19);">
-    </a>
-    <div id="title-description">
-      <span class="rotate">Developer</span>
-    </div>
-    <div id="explore">
-      <a ng-click="tab.transend()">
-        <span class="helper"></span>Explore</a>
-    </div>
-    {% include "partials/social.phtml" %}
-  </div>
-
   <div ng-view class="ngview"></div>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
@@ -44,13 +31,6 @@
   <script src="js/jquery.simple-text-rotator.js"></script>
   <script src="js/app.js"></script>
   <!--<script src="js/app.min.js"></script> -->
-  <script>
-    $(".rotate").append(', Designer, Kiricon');
-    $(".rotate").textrotator({
-      animation: "flipUp",
-      speed: 2000
-    });
-  </script>
   <link href="css/simpletextrotator.css" rel='stylesheet' type='text/css'>
   <link href="css/main.css" rel='stylesheet' type='text/css'>
   <link href="css/about.css" rel='stylesheet' type='text/css'>

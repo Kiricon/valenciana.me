@@ -54,12 +54,28 @@ app.controller('TabController', function($scope, $location){
     }
 });
 
+app.controller('HomeController', function(){
+  $(".rotate").append(', Designer, Kiricon');
+  $(".rotate").textrotator({
+    animation: "flipUp",
+    speed: 2000
+  });
+});
+
 app.controller('ideController', function(){
     var editor = ace.edit('monokai');
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setUseWrapMode(true);
     editor.session.setMode('ace/mode/javascript');
     editor.$blockScrolling = Infinity;
+});
+
+app.controller('AboutController', function(){
+  var editor = ace.edit('monokai');
+  editor.setTheme("ace/theme/monokai");
+  editor.getSession().setUseWrapMode(true);
+  editor.session.setMode('ace/mode/javascript');
+  editor.$blockScrolling = Infinity;
 });
 
 app.controller('SkillsController', function(){
@@ -74,8 +90,14 @@ app.config(function($routeProvider, $locationProvider) {
 
         // route for the home page
         .when('/', {
+            templateUrl : 'partials/home-section.html',
             controller: 'HomeController',
             controllerAs: 'home'
+        })
+        .when('/about', {
+            templateUrl : 'partials/about-section.html',
+            controller: 'AboutController',
+            controllerAs: 'about'
         })
 
         .when('/welcome', {
