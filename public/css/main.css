@@ -178,11 +178,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
-    background-image: -webkit-linear-gradient(left,#ff5e3a 0,#ff2a68 100%);
-    background-image: -moz-linear-gradient(left,#ff5e3a 0,#ff2a68 100%);
-    background-image: -o-linear-gradient(left,#ff5e3a 0,#ff2a68 100%);
-    background-image: linear-gradient(to right,#ff5e3a 0,#ff2a68  100%);
+    background: rgba(33,206,153, 0.8);
     -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
@@ -282,9 +278,8 @@ a {
 }
 
 #ide {
-    width: 50%;
-    min-width: 950px;
-    height: auto;
+    min-width: 820px;
+    height: 230px;
     margin: 0px auto;
     border-radius: 3px;
     display: table;
@@ -308,7 +303,7 @@ a {
 #ide .editor {
     display: table;
     width: 100%;
-    height: 300px;
+    height: 230px;
     font-size: 1em;
 }
 #ide .button {
@@ -534,4 +529,15 @@ a {
   width: 100%;
   background: rgba(204, 204, 204, 0.58);;
   float: left;
+}
+
+.abouttitle {
+    font-family: 'open sans';
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+    z-index: 3;
+    margin-top: 40px;
+    text-shadow: 0 0 0.06em;
+    width: 70%;
 }
