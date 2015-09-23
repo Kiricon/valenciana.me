@@ -2,7 +2,168 @@
 <html ng-app="app">
 
 <head lang="en">
-  {% include "partials/header.phtml" %} {% include "partials/indexcss.phtml" %}
+  {% include "partials/header.phtml" %}
+  <style>
+      html {
+          height: 100%;
+          width: 100%;
+          margin: 0px !important;
+        /*  overflow-y: hidden; */
+      }
+      body {
+          width: 100%;
+          height: 100%;
+          display: table;
+          margin: 0px;
+          background: #fafafa;
+          background-size: 100% 100% !important;
+      }
+      a {
+          text-decoration: none;
+          color: inherit;
+      }
+      .center-content {
+        position:absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display:table;
+        margin: 20px auto 0px auto;
+        text-align: center;
+      }
+      #overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background: url('http://cdn01.wallconvert.com/_media/wallpapers_1920x1200/1/2/work-desk-14949.jpg') center center;
+        transition: all 500ms;
+        will-change: transform;
+      }
+      .overlaytitle {
+        position: absolute !important;
+        height: 400px !important;
+      }
+
+      #overlay:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,22,43,0.83);
+      }
+
+      @media screen and (max-width: 600px) {
+        .center-content {
+          position: relative !important;
+          top: 0% !important;
+          left: 0% !important;
+          transform: translate(0%, 0%) !important;
+        }
+
+          #nav-bar {
+            width: 98% !important;
+            margin: 0px 0px !important;
+            padding: 1% !important;
+            font-size: 1em !important;
+          }
+          html {
+            overflow-y: auto !important;
+          }
+
+      }
+
+      #title {
+          position: relative;
+          font-family: 'open sans';
+          text-align: center;
+          font-size: 3.5em;
+          text-transform: uppercase;
+          font-weight: 300;
+          color: white;
+          line-height: 1.2;
+          text-shadow: 0 0 0.07em white;
+          padding-bottom: 2px;
+          margin: 0px auto 20px auto;
+          display:table;
+          transition: all 0.3s;
+          will-change: opacity;
+          -webkit-animation: fadein 300ms;
+      }
+
+      #title::after{
+          content: "";
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background: white;
+          background: -webkit-linear-gradient(left, transparent 0%,#fff 50%,transparent 100%);
+          background: -moz-linear-gradient(left, transparent 0%,#fff 50%,transparent 100%);
+          background: -o-linear-gradient(left, transparent 0%,#fff 50%,transparent 100%);
+          background: linear-gradient(left, transparent 0%,#fff 50%,transparent 100%);
+      }
+      #explore {
+          display: table;
+          font-family: 'open sans';
+          text-align: center;
+          font-size: 1.5em;
+          /* text-transform: uppercase; */
+          font-weight: 300;
+          color: rgba(255,255,255, 1);
+          line-height: 1.2;
+          text-shadow: 0 0 0.07em white;
+          padding: 15px 25px;
+          border-radius: 10px;
+          border: solid 2px white;
+          margin: 0px auto;
+          position: relative;
+          overflow:hidden;
+          cursor: pointer;
+          transition: all 0.3s;
+          will-change: opacity;
+          -webkit-animation: fadein 300ms;
+      }
+      #explore span {
+          font-size: 32px;
+          text-shadow: none;
+      }
+      #title-description {
+          height: 100%;
+          font-family: 'open sans';
+          width: 100%;
+          text-align: center;
+          font-size: 2.5em;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: white;
+          line-height: 1.2;
+          text-shadow: 0 0 0.07em white;
+          transition: all 0.3s;
+          will-change: opacity;
+          -webkit-animation: fadein 300ms;
+      }
+
+      #social {
+          magin-top: 5px;
+          text-align: center;
+          font-size: 32px;
+          color: rgba(255,255,255, 1);
+          opacity: 0.6;
+          transition: all 0.3s;
+          will-change: opacity;
+          -webkit-animation: fadein 300ms;
+      }
+
+      #center-content img {
+          height: 50%;
+          width: 50%;
+      }
+
+  </style>
 </head>
 
 <body ng-controller="TabController as tab">
@@ -20,9 +181,11 @@
     <div><a href="about">About Me</a><div class="diamond">&#9670;</div><div class="line"></div></div>
     <div>Contact Me</div>
   </section>
-  <div id="overlay"></div>
-  <div ng-view class="ngview"></div>
+  <div id="overlay" ng-class="{overlaytitle:tab.isSet('/about')}"></div>
+  <div ng-view class="ngview" style="height: 100%;"></div>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>

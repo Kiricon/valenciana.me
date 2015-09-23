@@ -279,7 +279,7 @@ a {
 
 #ide {
     min-width: 820px;
-    height: 230px;
+    height: 200px;
     margin: 0px auto;
     border-radius: 3px;
     display: table;
@@ -290,7 +290,8 @@ a {
     -o-transition: all 0.3s;
     transition: all 0.3s;
     will-change: opacity;
-    -webkit-animation: fadein 0.5s;
+    -webkit-animation: fadein 300ms;
+    text-align: left;
 }
 #ide .top {
     width: 100%;
@@ -303,7 +304,7 @@ a {
 #ide .editor {
     display: table;
     width: 100%;
-    height: 230px;
+    height: 200px;
     font-size: 1em;
 }
 #ide .button {
@@ -337,7 +338,7 @@ a {
   font-size:1.5em;
   font-family: 'open sans','Roboto', sans-serif;
   color: #fff;
-  z-index: 1;
+  z-index: 3;
   position: fixed;
 }
 
@@ -533,11 +534,56 @@ a {
 
 .abouttitle {
     font-family: 'open sans';
-    font-size: 5em;
+    font-size: 4em;
     font-weight: bold;
     color: white;
     z-index: 3;
-    margin-top: 40px;
     text-shadow: 0 0 0.06em;
     width: 70%;
+    line-height: 1.2;
+    transition: all 0.3s;
+    will-change: opacity;
+    -webkit-animation: fadein 300ms;
+}
+
+#about {
+    display:table;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width:100%;
+    height: 400px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.description-block {
+  float: left;
+  margin: 10px;
+  font-weight: bold;
+  font-family: lato;
+  color: #2b3d4f;
+  max-width:
+}
+#desc-img {
+  width: 300px;
+  text-align: center;
+  font-weight: normal;
+}
+#desc-img img {
+  border-radius: 5px;
+  border: solid white 5px;
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.6);
+}
+
+#realcontent {
+  display: table;
+  margin: 10px auto;
+}
+#bottom-section {
+  width: 100%;
+  height: 500px;
+  background:#E0E0E0
 }
