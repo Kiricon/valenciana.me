@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-ruby-sass');
 const uglify = require('gulp-uglify');
-const cleanCSS = require('gulp-clean-css'); 
+const cleanCSS = require('gulp-clean-css');
 const cache = require('gulp-cached');
 const fs = require('fs');
 
@@ -41,20 +41,18 @@ gulp.task('convertcss', function(){
 
 gulp.task('browser-sync', function(){
   browserSync.init({
-    server: {
-      baseDir: "src"
-    }
+    proxy: "localhost:5000"
   });
 });
 
 gulp.task('watch', function(){
-  
+
   gulp.watch(paths.js, ['watchjs']);
   gulp.watch(paths.sass, ['convertcss']);
   gulp.watch(paths.html, ['watchhtml']);
-  
 
-  
+
+
 });
 
 gulp.task('run', ['browser-sync', 'watch']);
