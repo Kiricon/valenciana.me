@@ -9,7 +9,6 @@
   <meta name="author" content="Dominic Valenciana">
   <style>
     body {
-      background: #eee;
       line-height: 1;
       font: 16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
       color: #666;
@@ -24,9 +23,21 @@
       color: #222;
     }
 
+    #description{
+      font-size: 20px;
+      font-weight: 300;
+      color: #aaa;
+    }
+
     #mainWrapper {
+      margin: 30px auto 0px auto;
+      display: table;
+    }
+
+    #mainWrapper div {
       margin: 0px auto;
       display: table;
+      text-align: center;
     }
 
     #profilePicture{
@@ -36,16 +47,65 @@
       margin: 0px auto;
       display: block;
     }
+    .special, a {
+      color: #F48FB1;
+      text-decoration: none;
+    }
+
+    #header {
+      border-bottom: 1px solid #eee;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    .itemBlock {
+      margin-top: 30px !important;
+      width: 500px;
+    }
+    .itemBlock img {
+      height: 50px;
+      width: 50px;
+      display: block;
+      float: left;
+    }
+    .itemBlock .description{
+      float: left;
+      width: 400px;
+      text-align: left !important;
+      padding-left: 20px;
+
+    }
   </style>
 </head>
 
 <body>
 
   <div id="mainWrapper">
-    <img id="profilePicture" src="img/profile.jpg" />
-    <div id="name">
-      Dominic Valenicana
+
+    <div id="header">
+      <img id="profilePicture" src="img/profile.jpg" />
+      <div id="name">
+        Dominic Valenicana
+      </div>
+      <div id="description">
+        Engineer at US Figure Skating Association and <span class="special">Tech Hobbiest</span>
+      </div>
     </div>
+
+    <div id="mainContent">
+      <div class="itemBlock">
+        <img src="img/github.svg" />
+        <div class="description">
+          Check out my <a href="https://github.com/Kiricon">github</a>. I'm always working on personal projects and
+          contributing to the open source community.
+        </div>
+      </div>
+    </div>
+
+
+
+
   </div>
 
 </body>
