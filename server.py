@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from flask import Flask, request, redirect, url_for, send_from_directory
 
 # Setup Flask app.
