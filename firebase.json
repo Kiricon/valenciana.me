@@ -1,0 +1,8 @@
+{
+    "hosting": {
+        "public": "./src",
+        "ignore": [
+            "**/node_modules/**"
+        ]
+    }
+}
