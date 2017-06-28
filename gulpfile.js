@@ -41,7 +41,7 @@ gulp.task('convertcss', function(){
 
 gulp.task('browser-sync', function(){
   browserSync.init({
-    proxy: "localhost:5000"
+    server: { baseDir: "./src"}
   });
 });
 
@@ -55,4 +55,4 @@ gulp.task('watch', function(){
 
 });
 
-gulp.task('run', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch']);
