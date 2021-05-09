@@ -1,154 +1,163 @@
 <!doctype html>
 
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
 
-  <title>valenciana</title>
+  <title>@DomValenciana</title>
   <meta name="description" content="valenciana">
   <meta name="author" content="Dominic Valenciana">
   <style>
+    html,
     body {
       line-height: 1;
-      font: 16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #666;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #profilePicture {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      margin: 1em auto;
+      display: block;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
 
     #name {
       font-weight: 600;
-      letter-spacing: -2px;
       font-size: 3em;
       color: #222;
     }
 
-    #description{
-      font-size: 20px;
-      font-weight: 300;
+    #description {
+      font-size: 1.5em;
     }
 
-    #mainWrapper {
-      margin: 100px auto 0px auto;
-      display: table;
+    #links {
+      display: flex;
+      justify-content: space-around;
     }
 
-    #mainWrapper div {
+    #links a {
+      display: block;
+    }
+
+    main {
       margin: 0px auto;
       display: table;
       text-align: center;
+      font-weight: normal;
     }
 
-    #profilePicture{
-      border-radius: 50%;
-      height: 100px;
-      width: 100px;
-      margin: 0px auto;
-      display: block;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    }
-    .special, a {
-      color: #F48FB1;
-      text-decoration: none;
-    }
-
-    #header {
+    header {
       border-bottom: 1px solid #eee;
-      margin-bottom: 40px;
+      margin-bottom: 2em;
       text-align: center;
       position: relative;
     }
-    .itemBlock {
-      margin-top: 30px !important;
-      width: 500px;
-    }
-    .itemBlock img {
-      height: 50px;
-      width: 50px;
-      display: block;
-      float: left;
-      border-radius: 50%;
-    }
-    .itemBlock .description{
-      float: left;
-      width: 400px;
-      text-align: left !important;
-      padding-left: 20px;
 
-    }
-    .handles {
-      margin: 10px !important;
+    .handle {
+      margin: 10px;
       width: 100%;
       text-align: center;
+    }
+
+    .t-blue,
+    .handle a {
+      color: #1DA1F2;
     }
   </style>
 </head>
 
 <body>
 
-  <div id="mainWrapper">
+  <main>
 
-    <div id="header">
-      <img id="profilePicture" src="img/profile.jpg" />
+    <header>
+      <img id="profilePicture" src="https://github.com/kiricon.png?s=150" />
       <div id="name">
         Dominic Valenicana
       </div>
       <div id="description">
-         Software Engineer at Confluence, <span class="special">Tech Enthusiast</span> and <span class="special"> Open Source Contributor</span>.
-         <div class="handles">
-         <a href="https://twitter.com/DomValenciana" target="_blank">@DomValenciana</a>
-         </div>
-      </div>
-    </div>
-
-    <div id="mainContent">
-      <div class="itemBlock">
-        <a href="https://github.com/Kiricon" target="_blank">
-          <img src="img/github.svg" />
-        </a>
-        <div class="description">
-          Check out my <a href="https://github.com/Kiricon" target="_blank">Github</a>. I'm always working on personal projects and
-          contributing to the open source community.
+        Software Engineer at <span class="t-blue">Twitter</span>
+        <br /> and lover of <span id="thingILove"></span>
+        <div class="handle">
+          <a href="https://twitter.com/DomValenciana" target="_blank">@DomValenciana</a>
         </div>
       </div>
-
-      <div class="itemBlock">
-        <a href="https://medium.com/@dominicvalenciana" target="_blank">
-          <img src="https://cdn-images-1.medium.com/max/1600/1*emiGsBgJu2KHWyjluhKXQw.png" />
-        </a>
-        <div class="description">
-          Take a read through some <a href="https://cdn-images-1.medium.com/max/1600/1*emiGsBgJu2KHWyjluhKXQw.png"> articles I've published</a> related to web development,
-          computer science and game development.
-        </div>
-      </div>
-
-      <div class="itemBlock">
-        <a href="http://stackoverflow.com/users/5111850/dominicvalenciana?tab=profile" style="padding: 5px;" target="_blank">
-          <img src="img/stackoverflow.svg" />
-        </a>
-        <div class="description">
-          I share my expertise with people on <a href="http://stackoverflow.com/users/5111850/dominicvalenciana?tab=profile" target="_blank">StackOverflow</a>.
-          Feel free to read up on topics I care a lot about and documentation that I've help fill out for
-          APIs and programming languages.
-        </div>
-      </div>
-    </div>
-
-    <div class="itemBlock">
-      <a href="mailto:dominicvalenciana@gmail.com" target="_top">
-        <img src="img/mail.png" />
+    </header>
+    <div id="links">
+      <a href="https://github.com/kiricon">
+        <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32"
+          aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
       </a>
-      <div class="description">
-        Get in contact with me if you have any questions
-        or just want to talk tech. <span class="special">dominicvalenciana@gmail.com</span>
-      </div>
+
+      <a href="http://stackoverflow.com/users/5111850/dominicvalenciana?tab=profile">
+        <img height="32" src="https://stackoverflow.design/assets/img/logos/se/se-icon.png" />
+      </a>
+
+      <a href="https://medium.com/@dominicvalenciana">
+        <svg height="32" viewBox="0 0 1043.63 592.71">
+          <g data-name="Layer 2">
+            <g data-name="Layer 1">
+              <path
+                d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </a>
     </div>
-  </div>
+
+  </main>
 
 
 
 
   </div>
+
+  <script>
+    const thingsILove = [
+      'Poke',
+      'Minecraft',
+      'Open Source',
+      'Fantasy Books',
+      'Electronics',
+      'Boba',
+      'History'
+    ];
+    const thingILove = document.querySelector('#thingILove');
+    let index = 0;
+
+    const setThing = () => {
+      thingILove.innerHTML = thingsILove[index];
+      if (index === thingsILove.length - 1) index = -1;
+      index++;
+      setTimeout(setThing, 3000);
+    }
+
+    setThing();
+  </script>
 
 </body>
+
 </html>
